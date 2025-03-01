@@ -37,8 +37,8 @@ export default function MainNav() {
                 </NavLink>
               </li>
               <li className="nav-item dropdown">
-                <NavLink to="/products" className="nav-link" aria-current="page">
-                  Prodotti
+                <NavLink to="/posts" className="nav-link" aria-current="page">
+                  Posts
                 </NavLink>
               </li>
             </ul>

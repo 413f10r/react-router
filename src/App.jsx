@@ -3,11 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //pages
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
-import Products from './pages/products/Products';
-import SingleProduct from './pages/products/SingleProduct';
+import Posts from './pages/posts/Posts';
+
 
 //layouts
 import DefaultLayout from "./layouts/DefaultLayout";
+import SinglePost from './pages/posts/SinglePost';
 
 
 function App() {
@@ -17,8 +18,8 @@ function App() {
         <Route Component={DefaultLayout}>
           <Route path="/" Component={HomePage} />
           <Route path="/contact" Component={ContactPage} />
-          <Route path="/products" Component={Products} />
-          <Route path="/products/:id" Component={SingleProduct} />
+          <Route path="/posts" Component={Posts} />
+          <Route path="/post/:id" Component={SinglePost} />
         </Route>
       </Routes>
     </BrowserRouter>

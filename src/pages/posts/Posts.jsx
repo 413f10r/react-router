@@ -1,14 +1,14 @@
 //compoennts
 
-const HomePage = () => {
+const Posts = () => {
   return (
     <>
       <div className="mainCont">
-        <h1>HOME PAGE</h1>
+        <h1>Post</h1>
       </div>
 
     </>
   );
 };
 
-export default HomePage;
+export default Posts;

@@ -1,8 +1,11 @@
 const ContactPage = () => {
     return (
         <>
-            <main className="container">
-                <h1 className="text-center">Pagina Contatti</h1>
+            <main className="">
+                <div className="mainCont">
+                    <h1 className="text-center">CHI SIAMO</h1>
+                </div>
+
             </main>
         </>
     );
