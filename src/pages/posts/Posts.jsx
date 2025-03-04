@@ -1,39 +1,32 @@
 //compoennts
 import { useState, useEffect } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 
-const Products = () => {
-  const [products, setProducts] = useState([]);
+const Post = () => {
+  const [posts, setPosts] = useState([]);
 
-  const url = import.meta.env.VITE_ENDPOINT_URL;
 
-  useEffect(() => {
-    console.log(url);
-  });
 
   useEffect(() => {
-    // axios
-    //   .get(url)
-    //   .then((res) => setProducts(res.data));
-
-    fetch(`${url}`, { method: 'GET' })
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
+    axios
+      .get('http://localhost:3000/posts')
+      .then((res) => setPosts(res.data));
   }, []);
 
   return (
     <>
       <div className="container">
         <div className="row">
-          {products.map((elem) => {
+          {posts.map((elem) => {
             return (
               <div key={elem.id} className="col-4">
-                <NavLink to={`/products/${elem.id}`}>
+                <NavLink to={`/posts/${elem.id}`}>
                   <div className="card">
                     <div className="card-body">
-                      <h4 className="card-title">{elem.name}</h4>
-                      <p className="card-text">{elem.ingredients}</p>
+                      <h4 className="card-title">{elem.title}</h4>
+                      <p className="card-text">{elem.content}</p>
+                      <button className='btn btn-primary'> Scopri di più</button>
                     </div>
                   </div>
                 </NavLink>
@@ -46,5 +39,5 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Post;
 

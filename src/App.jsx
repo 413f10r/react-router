@@ -19,7 +19,7 @@ function App() {
           <Route path="/" Component={HomePage} />
           <Route path="/contact" Component={ContactPage} />
           <Route path="/posts" Component={Posts} />
-          <Route path="/post/:id" Component={SinglePost} />
+          <Route path="/posts/:id" Component={SinglePost} />
         </Route>
       </Routes>
     </BrowserRouter>
